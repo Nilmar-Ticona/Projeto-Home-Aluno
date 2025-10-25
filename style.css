@@ -1,0 +1,552 @@
+
+/* ======= CABEÇALHO ======= */
+header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+header span {
+  font-weight: 400;
+  color: #777;
+  margin-left: 6px;
+}
+
+.perfil {
+  background: #111;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 50%;
+  font-weight: 600;
+}
+
+/* ======= CONTEÚDO ======= */
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+h2 {
+  margin: 0;
+}
+
+.subtitulo {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* ======= ABAS ======= */
+.abas {
+  display: flex;
+  gap: 10px;
+  background: #eee;
+  padding: 6px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.aba {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.aba.ativa {
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+/* ======= CONTEÚDO DAS ABAS ======= */
+.conteudo {
+  display: none;
+}
+.conteudo.ativo {
+  display: block;
+}
+
+/* ======= CARDS ======= */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.em-dev { background: #dbeafe; color: #1e40af; }
+.status.revisao { background: #fef3c7; color: #92400e; }
+.status.pendente { background: #f3f4f6; color: #374151; }
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #555;
+  margin: 8px 0;
+}
+
+.barra-progresso {
+  background: #eee;
+  height: 8px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.barra-progresso div {
+  background: #111;
+  height: 100%;
+  border-radius: 6px;
+}
+
+.certificado {
+  background: #fff7e6;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin: 10px 0;
+}
+.certificado.verde {
+  background: #ecfdf5;
+  color: #065f46;
+}
+
+.tecnologias {
+  margin: 10px 0;
+}
+
+.equipe {
+  display: flex;
+  gap: 8px;
+}
+
+.membro {
+  background: #eee;
+  border-radius: 50%;
+  padding: 8px 12px;
+  font-weight: 600;
+}
+
+
+/* ===== SEÇÃO: PROPOSTAS DE GERENTES ===== */
+/* Estilização dos cards de propostas de estágio */
+.proposta-card {
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+}
+
+.proposta-card .card-header-proposta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.proposta-card .card-header-proposta h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+.proposta-card .status {
+  font-size: 0.85rem;
+  color: #000;      
+  font-weight: 700;  
+}
+.proposta-card .descricao {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0 0 8px;
+}
+
+.proposta-card .info-list {
+  display: flex;
+  gap: 16px;
+  font-size: 0.9rem;
+  color: #444;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.proposta-card .info-list li i {
+  margin-right: 4px;
+}
+
+.proposta-card .certificado-box {
+  background: #e8f8ef;
+  border: 1px solid #cceedd;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+.proposta-card .label-tecnologias {
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: #444;
+  margin: 6px 0 4px;
+}
+
+.proposta-card .tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.proposta-card .tech-list li {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  color: #111827;
+}
+
+.proposta-card .card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+.proposta-card .btn-accept {
+  background: #000;
+  color: #fff;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: 1px solid #000;
+}
+.proposta-card .btn-accept:hover {
+  background: #111;
+}
+.proposta-card .btn-decline {
+  background: transparent;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.proposta-card .btn-decline:hover {
+  background: #f8d7da;
+  border-color: #f5c2c7;
+  color: #b71c1c;
+}
+
+/* Foco visível para acessibilidade (teclado) */
+.btn-accept:focus,
+.btn-decline:focus,
+.btn-download:focus,
+.btn-view:focus,
+.tab-link:focus {
+  outline: 3px solid rgba(2,132,199,0.2);
+  outline-offset: 2px;
+}
+
+#propostas .cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ===== SEÇÃO: CERTIFICADOS ===== */
+/* Layout da lista de certificados conquistados */
+#certificados .cards-list {
+  display: block;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+}
+#certificados .certificado-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  position: relative;
+  padding-left: 28px; /* espaço para a faixa */
+  overflow: visible;
+}
+#certificados .certificado-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  background: linear-gradient(180deg,#2ecc71,#28a745);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 0 2px 6px rgba(40,167,69,0.08);
+  pointer-events: none;
+}
+#certificados .certificado-card.faixa-larga {
+  padding-left: 48px;
+}
+#certificados .certificado-card.faixa-larga::before {
+  width: 20px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+#certificados .card-header-certificado {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+#certificados .card-header-certificado h3 {
+  font-size: 1.05rem;
+  color: #000;
+  margin: 0;
+  font-weight: 600;
+}
+#certificados .cert-entity {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+#certificados .certificado-card .meta {
+  font-size: 0.9rem;
+  color: #444;
+  margin: 0;
+}
+#certificados .cert-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  margin: 12px 0;
+  list-style: none;
+}
+#certificados .cert-details li {
+  font-size: 0.88rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#certificados .cert-details li i {
+  display: inline-block;
+  width: 22px;
+  text-align: center;
+  font-style: normal;
+  color: #000;
+}
+
+#certificados .card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 6px;
+}
+#certificados .btn-download,
+#certificados .btn-view {
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 160ms ease, background 160ms ease;
+  /* Remover sublinhado padrão de links */
+  text-decoration: none;
+  /* garantir que padding funcione como botão */
+  display: inline-block;
+}
+#certificados .btn-download {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+#certificados .btn-download:hover {
+  background: #111;
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+#certificados .btn-view {
+  background: transparent;
+  color: #000;
+  border-color: #e6e6e6;
+}
+#certificados .btn-view:hover {
+  background: #fafafa;
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+@media (min-width: 980px) {
+  #certificados .certificado-card {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* ===== NAVEGAÇÃO POR ABAS ===== */
+/* Estrutura e estilização do menu de navegação principal */
+.tabs {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.tabs .container {
+  display: flex;
+}
+
+.tab-link {
+  flex: 1;
+  padding: 16px 0;
+  background: none;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.2s, border-bottom 0.2s;
+}
+
+.tab-link.active {
+  color: #000;
+  border-bottom: 4px solid #000;
+  font-weight: bold;
+}
+
+.tab-link:hover {
+  color: #000;
+}
+/*  Controle de Visibilidade das Abas  */
+.tab-content {
+  display: none;   /* todas escondidas por padrão */
+}
+
+.tab-content.active {
+  display: block;  
+}
+
+/* ===== MEUS PROJETOS ===== */
+#meus-projetos .hint {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.project-card {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  padding: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+}
+.project-header { display:flex; justify-content:space-between; align-items:baseline; gap:8px; }
+.project-title { margin:0; font-size:1rem; font-weight:600; }
+.project-company { color:#666; font-size:0.85rem; }
+
+/* ===== HISTÓRICO: estados aceito / recusado ===== */
+.history-item.accepted .history-icon { color: #28a745; }
+.history-item.declined .history-icon { color: #b71c1c; }
+.history-item.declined .history-icon::before { content: "✗"; }
+.history-item.declined .history-icon { font-weight:700; }
+
+/* Visual de entrada/saída: animação para remoção suave (JS deve adicionar .fade-out, depois remover do DOM) */
+.fade-out {
+  animation: fadeOut 300ms ease forwards;
+}
+@keyframes fadeOut {
+  from { opacity: 1; transform: translateY(0); height: auto; }
+  to   { opacity: 0; transform: translateY(-6px); height: 0; padding: 0; margin: 0; }
+}
+/* ===== CONTROLE DE VISIBILIDADE DAS ABAS ===== */
+.tab-content {
+  display: none;   
+}
+.tab-content.active {
+  display: block;  
+}
+
+/* ===== HISTÓRICO ===== */
+.history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  color: #333;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.history-icon {
+  color: #28a745; 
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1rem;
+}
+/* ===== ANIMAÇÕES DE BOTÕES ===== */
+/* Efeitos de hover e transição para botões de ação */
+.proposta-card .btn-accept,
+.proposta-card .btn-decline {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.proposta-card .btn-accept:hover,
+.proposta-card .btn-decline:hover {
+  transform: translateY(-1px); 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15); 
+}

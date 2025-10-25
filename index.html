@@ -1,0 +1,321 @@
+ <!DOCTYPE html>
+  <!-- Dashboard do aluno para gerenciamento de estágios e certificados -->
+  <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>Dashboard do Aluno • EstágioConnect</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Navegação principal do dashboard -->
+    <nav class="tabs">
+      <div class="container">
+        <button class="tab-link active" data-tab="projetos">Meus Projetos</button>
+        <button class="tab-link" data-tab="propostas">Propostas de Gerentes</button>
+        <button class="tab-link" data-tab="certificados">Meus Certificados</button>
+         <button class="tab-link" data-tab="historico">Histórico</button>
+      </div>
+    </nav>
+
+    <main class="container">
+
+
+    
+    <!-- Aba: Meus Projetos -->
+    <section id="projetos" class="tab-content active">
+      <div class="card">
+        <div class="card-header">
+          <h3>📦 Sistema de E-commerce</h3>
+          <span class="status em-dev">Em Desenvolvimento</span>
+        </div>
+        <p class="info">TechCorp • Gerente: Carlos Oliveira</p>
+        <div class="meta">
+          <span>📅 15 Julio 2025</span>
+          <span>👥 3 membros</span>
+        </div>
+        <p class="label">Progresso</p>
+        <div class="barra-progresso"><div style="width: 65%;"></div></div>
+        <div class="certificado">
+          <strong>Certificado a ser conquistado:</strong> Certificado Frontend Avançado
+        </div>
+        <p class="tecnologias"><strong>Tecnologias:</strong> React, Node.js, PostgreSQL</p>
+        <div class="equipe">
+          <div class="membro">AS</div>
+          <div class="membro">JS</div>
+          <div class="membro">MC</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>📱 App Mobile de Delivery</h3>
+          <span class="status revisao">Revisão</span>
+        </div>
+        <p class="info">FoodTech • Gerente: Fernanda Lima</p>
+        <div class="meta">
+          <span>📅 10 Jan 2025</span>
+          <span>👥 2 membros</span>
+        </div>
+        <p class="label">Progresso</p>
+        <div class="barra-progresso"><div style="width: 90%;"></div></div>
+        <div class="certificado">
+          <strong>Certificado a ser conquistado:</strong> Certificado Mobile Development
+        </div>
+        <p class="tecnologias"><strong>Tecnologias:</strong> React Native, Firebase</p>
+        <div class="equipe">
+          <div class="membro">AS</div>
+          <div class="membro">PA</div>
+        </div>
+      </div>
+    </section>
+    
+
+
+
+
+
+  <!-- 2. Propostas de Gerentes -->
+      <section id="propostas" class="tab-content">
+        <h2>Propostas de Gerentes</h2>
+        <ul class="cards-list">
+
+          <!-- Proposta 1 -->
+          <li class="card proposta-card" data-proposal-id="prop-1" data-title="Plataforma de Learning Analytics" data-company="InnovaTech" data-manager="Roberto Santos">
+  <div class="card-header-proposta">
+    <h3>Plataforma de Learning Analytics</h3>
+    <span class="status"><strong>Pendente</strong></span>
+  </div>
+
+  <p class="meta">Proposta de: Roberto Santos — InnovaTech</p>
+
+  <p class="descricao">Desenvolvimento de dashboard para análise de dados educacionais</p>
+  <ul class="info-list">
+    <li><i>⏱</i>Duração: 4 meses</li>
+    <li><i>👥</i>Equipe: 3 pessoas</li>
+  </ul>
+  <div class="certificado-box">
+    Certificado oferecido: Data Science & Analytics
+  </div>
+  <p class="label-tecnologias">Tecnologias:</p>
+  <ul class="tech-list">
+    <li>React</li>
+    <li>Python</li>
+    <li>Machine Learning</li>
+  </ul>
+  <div class="card-actions">
+    <!-- Para JS:
+         data-action="accept" -> mover para Meus Projetos + adicionar histórico (data atual)
+         data-action="decline" -> adicionar histórico como recusado
+         JS deve animar (.fade-out) antes de remover o card.
+    -->
+  <button type="button" class="btn-accept" data-action="accept" data-proposal-id="prop-1" aria-label="Aceitar Proposta Plataforma de Learning Analytics">Aceitar Proposta</button>
+  <button type="button" class="btn-decline" data-action="decline" data-proposal-id="prop-1" aria-label="Recusar Proposta Plataforma de Learning Analytics">Recusar</button>
+  </div>
+</li>
+
+          <!-- Proposta 2 -->
+          <li class="card proposta-card" data-proposal-id="prop-2" data-title="Sistema de IoT para Smart Cities" data-company="DataCorp" data-manager="Lucia Fernandes">
+  <div class="card-header-proposta">
+    <h3>Sistema de IoT para Smart Cities</h3>
+    <span class="status"><strong>Pendente</strong></span>
+  </div>
+
+  <p class="meta">Proposta de: Lucia Fernandes — DataCorp</p>
+
+  <p class="descricao">Desenvolvimento de sensores inteligentes para monitoramento urbano</p>
+  <ul class="info-list">
+    <li><i>⏱</i>Duração: 6 meses</li>
+    <li><i>👥</i>Equipe: 4 pessoas</li>
+  </ul>
+  <div class="certificado-box">
+    Certificado oferecido: IoT & Smart Systems
+  </div>
+  <p class="label-tecnologias">Tecnologias:</p>
+  <ul class="tech-list">
+    <li>IoT</li>
+    <li>Node.js</li>
+    <li>React</li>
+    <li>MongoDB</li>
+  </ul>
+  <div class="card-actions">
+    <!-- Mesma lógica do card anterior para aceitar/recusar -->
+  <button type="button" class="btn-accept" data-action="accept" data-proposal-id="prop-2" aria-label="Aceitar Proposta Sistema de IoT para Smart Cities">Aceitar Proposta</button>
+  <button type="button" class="btn-decline" data-action="decline" data-proposal-id="prop-2" aria-label="Recusar Proposta Sistema de IoT para Smart Cities">Recusar</button>
+  </div>
+</li>
+        </ul>
+      </section>
+
+      <!-- Placeholder: Meus Projetos (JS pode inserir projetos aceitos aqui) -->
+      <!-- Mesmo que a funcionalidade completa de 'meus projetos' esteja sendo feita por outro dev,
+           este container fornece um destino claro para o código JS que move propostas aceitas. -->
+      <section id="meus-projetos" class="tab-content">
+        <h2>Meus Projetos</h2>
+        <p class="hint">Projetos aceitos aparecem aqui (preenchido por JS).</p>
+        <ul class="project-list">
+          <!-- clonar #project-item-template e inserir aqui -->
+        </ul>
+      </section>
+
+  <!-- 3. Meus Certificados -->
+<section id="certificados" class="tab-content">
+  <h2>Meus Certificados Conquistados</h2>
+        <p class="total">Total: <strong>3</strong></p>
+        <ul class="cards-list">
+
+          <li class="card certificado-card">
+            <div class="card-header-certificado">
+              <h3>Certificado Desenvolvimento Frontend</h3>
+              <span class="cert-entity">Emitido: 28/08/2025</span>
+            </div>
+            <p class="meta">Website Institucional — StartupXYZ</p>
+            <ul class="cert-details">
+              <li><i>🔧</i>Habilidades: React; TypeScript; UI/UX Design; Perfomance Optimization</li>
+              <li><i>💻</i>Tecnologias: React; TypeScript; Tailwind CSS</li>
+              <li><i>⏱</i>120h de projeto</li>
+              <li><i>👔</i>Gerente: Ricardo Silva</li>
+            </ul>
+            <div class="card-actions">
+              <!-- Baixar: link para o arquivo PDF do certificado. Substituir href pelo caminho real do arquivo -->
+              <a class="btn-download" href="#" download="certificado-frontend.pdf" data-cert-id="cert-frontend" aria-label="Baixar Certificado Desenvolvimento Frontend">
+                Baixar Certificado
+              </a>
+
+              <!-- Visualizar: abre preview (implementar em JS) -->
+              <a class="btn-view" href="#" data-action="preview" data-cert-id="cert-frontend" aria-label="Visualizar Certificado Desenvolvimento Frontend">
+                Visualizar
+              </a>
+            </div>
+
+            <!-- Container de preview (oculto). JS deve inserir <iframe> ou <object> -->
+            <div class="cert-preview" id="preview-cert-frontend" hidden>
+              <!-- preview do certificado Development Frontend -->
+            </div>
+            <span class="cert-badge">Nota: A</span>
+          </li>
+
+          <li class="card certificado-card">
+            <div class="card-header-certificado">
+              <h3>Certificado Desenvolvimento Backend</h3>
+              <span class="cert-entity">Emitido: 21/05/2025</span>
+            </div>
+            <p class="meta">API de Gestão de Estoque — LogisTech</p>
+            <ul class="cert-details">
+              <li><i>🔧</i>Habilidades: Node.js; DataBase Design; API Security; Testing</li>
+              <li><i>💻</i>Tecnologias: Node.js; Express; PostgreSQL</li>
+              <li><i>⏱</i>80h de projeto</li>
+              <li><i>👔</i>Gerente: Mariana Costa</li>
+            </ul>
+            <div class="card-actions">
+              <a class="btn-download" href="#" download="certificado-backend.pdf" data-cert-id="cert-backend" aria-label="Baixar Certificado Desenvolvimento Backend">
+                Baixar Certificado
+              </a>
+              <a class="btn-view" href="#" data-action="preview" data-cert-id="cert-backend" aria-label="Visualizar Certificado Desenvolvimento Backend">
+                Visualizar
+              </a>
+            </div>
+            <!-- Container de preview (oculto). JS deve inserir <iframe> ou <object> -->
+            <div class="cert-preview" id="preview-cert-backend" hidden>
+              <!-- preview do certificado Development Backend -->
+            </div>
+            <span class="cert-badge">Nota: A+</span>
+          </li>
+
+          <li class="card certificado-card">
+            <div class="card-header-certificado">
+              <h3>Certificado Mobile Development</h3>
+              <span class="cert-entity">Emitido: 15/01/2025</span>
+            </div>
+            <p class="meta">App de Fitness — HealthTech</p>
+            <ul class="cert-details">
+              <li><i>🔧</i>Habilidades: React Native; Firebase; Mobile UX; Device Integration</li>
+              <li><i>💻</i>Tecnologias: React Native; Firebase; Redux</li>
+              <li><i>⏱</i>100h de projeto</li>
+              <li><i>👔</i>Gerente: Bruno Oliveira</li>
+            </ul>
+            <div class="card-actions">
+              <a class="btn-download" href="#" download="certificado-mobile.pdf" data-cert-id="cert-mobile" aria-label="Baixar Certificado Mobile Development">
+                Baixar Certificado
+              </a>
+              <a class="btn-view" href="#" data-action="preview" data-cert-id="cert-mobile" aria-label="Visualizar Certificado Mobile Development">
+                Visualizar
+              </a>
+            </div>
+            <!-- Container de preview (oculto). JS deve inserir <iframe> ou <object> -->
+            <div class="cert-preview" id="preview-cert-mobile" hidden>
+              <!-- preview do certificado Mobile Development -->
+            </div>
+            <span class="cert-badge">Nota: A</span>
+          </li>
+
+        </ul>
+      </section>
+
+  <!-- 4. Histórico -->
+  <section id="historico" class="tab-content">
+    <h2>Histórico</h2>
+    <ul class="history-list"> 
+      <li class="history-item">
+        <i class="history-icon">✓</i>
+        <span>Proposta aceita — Sistema E-commerce • TechCorp • 13/09/2025</span>
+      </li>
+      <li class="history-item">
+        <i class="history-icon">✓</i>
+        <span>Certificado Frontend conquistado — Website Institucional • StartupXYZ • 28/08/2025</span>
+      </li>
+       <li class="history-item">
+        <i class="history-icon">✓</i>
+        <span>Proposta aceita — App Mobile de Delivery • FoodTech • 25/08/2025</span>
+      </li>
+      <li class="history-item">
+        <i class="history-icon">✓</i>
+        <span>Certificado Backend conquistado — API de Gestão • Logistech • 21/05/2025</span>
+      </li>
+      <li class="history-item">
+        <i class="history-icon">✓</i>
+        <span>Certificado Mobile Development conquistado — App de Fitness  • HealthTech • 15/01/2025</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Templates para JS: clonar e preencher -->
+  <template id="history-item-template">
+    <li class="history-item">
+      <i class="history-icon">✓</i>
+      <span class="history-text"><!-- preencher: texto do histórico: e.g. 'Proposta aceita — [Título] • [Empresa] • [DD/MM/YYYY]' --></span>
+    </li>
+  </template>
+
+  <template id="project-item-template">
+    <li class="card project-card">
+      <div class="project-header">
+        <h3 class="project-title"></h3>
+        <span class="project-company"></span>
+      </div>
+      <p class="project-meta"></p>
+      <!-- JS pode adicionar links, descrição e data -->
+    </li>
+  </template>
+
+    </main>
+    <!-- Script para gerenciamento das abas e navegação -->
+    <script>
+    // Seleção dos elementos de navegação
+    const tabs  = document.querySelectorAll('.tab-link');
+    const panes = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        panes.forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+      });
+    });
+    
+    /*
+  Placeholder para interatividade dos certificados (implementar em JS)
+    */
+  </script>
+
+  </body>
+  </html>
